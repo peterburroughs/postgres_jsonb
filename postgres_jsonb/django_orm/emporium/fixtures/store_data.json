@@ -1,0 +1,186 @@
+[
+    {
+        "model": "emporium.Supplier",
+        "pk": 1,
+        "fields": {
+            "name": "Aussie Outfitters",
+            "tax_id": "653438754"
+        }
+    },
+    {
+        "model": "emporium.Supplier",
+        "pk": 2,
+        "fields": {
+            "name": "Transylvania HQ",
+            "tax_id": "724236423"
+        }
+    },
+    {
+        "model": "emporium.Supplier",
+        "pk": 3,
+        "fields": {
+            "name": "Novelelties, Novelties, LP",
+            "tax_id": "653253343"
+        }
+    },
+    {
+        "model": "emporium.Supplier",
+        "pk": 4,
+        "fields": {
+            "name": "Jurassic Goods",
+            "tax_id": "345346221"
+        }
+    },
+    {
+        "model": "emporium.Supplier",
+        "pk": 5,
+        "fields": {
+            "name": "Snow Mountain Gear",
+            "tax_id": "376818452"
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 1,
+        "fields": {
+            "sku": "IX432Z234",
+            "price": 199.95,
+            "supplier": 1,
+            "info": {
+                "description": "Super Poodle",
+                "acquire_cost": 150.00,
+                "on_sale": true,
+                "sale_price": 179.99,
+                "animal_info": {
+                    "weight": 25,
+                    "fur_color": "white",
+                    "eye_color": "green"
+                }
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 2,
+        "fields": {
+            "sku": "IX372Z231",
+            "price": 159.00,
+            "supplier": 1,
+            "info": {
+                "description": "Super Mut",
+                "acquire_cost": 150.00,
+                "animal_info": {
+                    "weight": 55,
+                    "fur_color": "brown",
+                    "eye_color": "grey"
+                }
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 3,
+        "fields": {
+            "sku": "TC3N4Z837",
+            "price": 99.99,
+            "supplier": 2,
+            "info": {
+                "description": "Monster Teeth",
+                "acquire_cost": 25.00,
+                "size": "L",
+                "color": "white"
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 4,
+        "fields": {
+            "sku": "BZ3N4Z438",
+            "price": 129.99,
+            "supplier": 5,
+            "info": {
+                "description": "Snow Shoes",
+                "acquire_cost": 55.00,
+                "size": "L",
+                "color": "orange"
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 5,
+        "fields": {
+            "sku": "BZ3N4Z449",
+            "price": 129.99,
+            "supplier": 5,
+            "info": {
+                "description": "Snow Shoes",
+                "acquire_cost": 55.00,
+                "size": "M",
+                "color": "white"
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 6,
+        "fields": {
+            "sku": "RC38AC250",
+            "price": 9.95,
+            "supplier": 5,
+            "info": {
+                "description": "Arctic Pie",
+                "acquire_cost": 5.00
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 7,
+        "fields": {
+            "sku": "S1C822391",
+            "price": 19.99,
+            "supplier": 3,
+            "info": {
+                "description": "Suncoast T",
+                "acquire_cost": 5.00,
+                "size": "L",
+                "color": "blue"
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 8,
+        "fields": {
+            "sku": "DCH78FN21",
+            "price": 1999.95,
+            "supplier": 3,
+            "info": {
+                "description": "Mechanical Pterodactyl",
+                "acquire_cost": 1250.00,
+                "sale_price": 1779.99,
+                "animal_info": {
+                                    "weight": 825,
+                                    "eye_color": "green",
+                                    "wingspan": 50
+                }
+            }
+        }
+    },
+    {
+        "model": "emporium.Bargain",
+        "pk": 9,
+        "fields": {
+            "sku": "XVN852433",
+            "price": 8.49,
+            "supplier": 1,
+            "info": {
+                "description": "Tasmanian Sauce",
+                "acquire_cost": 3.75,
+                "sale_price": 6.99 
+            }
+        }
+    }
+]

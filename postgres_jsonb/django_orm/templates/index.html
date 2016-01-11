@@ -1,0 +1,111 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emporium</title>
+
+    <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'custom.css' %}" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="col-md-10">
+        <div class="content">
+          <h2>Emporium</h2><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10">
+        <div class="content">
+          <h3>Query Inventory</h3>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <form action="/" method="post" class="form">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-2">
+            {{ form.supplier_id.label_tag }}
+          </div>
+          <div class="col-md-8">
+            {{ form.supplier_id.errors }}
+            {{ form.supplier_id }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            {{ form.filter_text.label_tag }}
+          </div>
+          <div class="col-md-8">
+            {{ form.filter_text }}
+            {{ form.filter_text.errors }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            {{ form.use_contains.label_tag }}
+          </div>
+          <div class="col-md-8">
+            {{ form.use_contains.errors }}
+            {{ form.use_contains }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="submit" value="Search" />
+          </div>
+        </div>
+      </form>
+      {% if display_results %}
+        <br>
+        {% if bargains %}
+          <p>Matching bargains:</p><br>
+          <div class="row">
+            <div class="col-md-2"><b>Description</b></div>
+            <div class="col-md-2"><b>Price</b></div>
+            <div class="col-md-2"><b>Sale Price</b></div>
+            <div class="col-md-2"><b>Color</b></div>
+            <div class="col-md-2"><b>Acquire Cost</b></div>
+          </div>
+          {% for bargain in bargains %}
+            <div class="row">
+              <div class="col-md-2">
+                {{ bargain.description }}
+              </div>
+              <div class="col-md-2">
+                {{ bargain.price }}
+              </div>
+              <div class="col-md-2">
+                {{ bargain.sale_price }}
+              </div>
+              <div class="col-md-2">
+                {{ bargain.color }}
+              </div>
+              <div class="col-md-2">
+                {{ bargain.acquire_cost }}
+              </div>
+            </div>
+            {% endfor %}
+        {% else %}
+          <p>No matching bargains found</p>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+
+    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
