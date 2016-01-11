@@ -10,5 +10,5 @@ the presentation. You will need to create databases called emporium_alchemy
 and emporium_django, and export these environment variables for the database
 connection string:
 
-``export DBUSER=your_postgres_username``
-``export DBPASSWORD=your_postgres_password``
+| ``export DBUSER=your_postgres_username``
+| ``export DBPASSWORD=your_postgres_password``

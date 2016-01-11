@@ -13,6 +13,7 @@ requires = [
     'pyramid_mako==1.0.2',
     'pyramid_debugtoolbar==2.4.2',
     'pyramid_tm==0.12.1',
+    'psycopg2==2.6.1',
     'SQLAlchemy==1.0.11',
     'transaction==1.4.4',
     'zope.sqlalchemy==0.7.6',
