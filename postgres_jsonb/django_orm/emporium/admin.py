@@ -1,5 +1,10 @@
 from django.contrib import admin
 
-from .models import Bargain
+from .models import Bargain, Supplier
 
-admin.site.register(Bargain)
+
+class BargainAdmin(admin.ModelAdmin):
+    list_display = ('description', 'price', 'sale_price', 'sku', 'supplier')
+
+admin.site.register(Bargain, BargainAdmin)
+admin.site.register(Supplier)
